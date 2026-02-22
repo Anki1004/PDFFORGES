@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: pdfforge-ankit
+    env: node
+    plan: free
+    buildCommand: npm install && apt-get update && apt-get install -y qpdf
+    startCommand: node server.js
